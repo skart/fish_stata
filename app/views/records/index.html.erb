@@ -1,0 +1,28 @@
+<h1>Listing Records</h1>
+ 
+<table>
+  <tr>
+    <th>Date</th>
+    <th>pH</th>
+    <th>Ammonia</th>
+    <th>Nitrite</th>
+    <th>Nitrate</th>
+    <th>KH</th>
+    <th>GH</th>
+    <th>Notes</th>
+
+  </tr>
+ 
+  <% @record.each do |t| %>
+    <tr>
+      <td><%= t.date %></td>
+      <td><%= t.ph %></td>
+      <td><%= t.ammonia %></td>
+      <td><%= t.nitrite %></td>
+      <td><%= t.nitrate %></td>
+      <td><%= t.kh %></td>
+      <td><%= t.gh %></td>
+      <td><%= t.notes %></td>
+    </tr>
+  <% end %>
+</table>

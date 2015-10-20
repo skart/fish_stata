@@ -1,0 +1,50 @@
+<h1>New Records</h1>
+<p>
+
+<%= form_for  Record.new do |f| %>
+  <p>
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </p>
+ 
+  <p>
+    <%= f.label :ph %>: 
+    <%= f.text_field :ph %>
+  </p>
+ 
+  <p>
+    <%= f.label :ammonia %>: 
+    <%= f.text_field :ammonia %>
+  </p>
+
+  <p>
+    <%= f.label :nitrite %>: 
+    <%= f.text_field :nitrite %>
+  </p>
+
+  <p>
+    <%= f.label :nitrate %>: 
+    <%= f.text_field :nitrite %>
+  </p>
+
+  <p>
+    <%= f.label :kh %>: 
+    <%= f.text_field :kh %>
+  </p>
+
+  <p>
+    <%= f.label :gh %>: 
+    <%= f.text_field :gh %>
+  </p>
+
+  <p>
+    <%= f.label :notes %>: 
+    <%= f.text_field :notes %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <%= link_to 'Back to List', records_path %>
+<% end %>
