@@ -1,0 +1,45 @@
+<%= form_for  @record do |f| %>
+  <p>
+    <b><%= f.label :date %></b><br>
+    <%= f.date_select :date %>
+  </p>
+ 
+  <p>
+    <b><%= f.label :ph %>: </b>
+    <%= f.select :ph, ph_scale %>
+  </p>
+ 
+  <p>
+   <b><%= f.label :ammonia %>: </b>
+    <%= f.select :ammonia, ammonia_scale %> ppm
+  </p>
+
+  <p>
+   <b> <%= f.label :nitrite %>: </b>
+    <%= f.select :nitrite, nitrite_scale %> ppm
+  </p>
+
+  <p>
+   <b><%= f.label :nitrate %>: </b>
+    <%= f.select :nitrate, nitrate_scale %> ppm
+  </p>
+
+  <p>
+   <b> <%= f.label :kh %>: </b>
+    <%= f.select :kh, kh_gh_scale %> drop(s)
+  </p>
+
+  <p>
+   <b><%= f.label :gh %>: </b>
+    <%= f.select :gh, kh_gh_scale %> drop(s)
+  </p>
+
+  <p>
+    <b><%= f.label :notes %>: 
+    <%= f.text_field :notes %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
