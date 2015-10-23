@@ -1,4 +1,6 @@
 class RecordsController < ApplicationController
+  before_action :set_record, only: [:show, :edit, :update, :destroy]
+
   def index
     	@record = Record.all
   	end
@@ -18,16 +20,12 @@ class RecordsController < ApplicationController
  	end
 
  	def show
-    	@record = Record.find(params[:id])
     end
 
   def edit
-    @record = Record.find(params[:id])
   end
 
   def update
-    @record = Record.find(params[:id])
- 
     if @record.update(record_params)
       redirect_to @record
     else
@@ -36,14 +34,17 @@ class RecordsController < ApplicationController
   end
 
   def destroy
-    @record = Records.find(params[:id])
     @record.destroy
  
-    redirect_to articles_path
+    redirect_to records_path
   end
 
  	private
-  	def record_params
+  	def set_record
+      @record = Record.find(params[:id])
+    end
+
+    def record_params
     	params.require(:record).permit(:date, :ph, :ammonia, :nitrite, :nitrate, :kh, :gh, :notes)
  	 end
 end
