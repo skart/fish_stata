@@ -13,7 +13,7 @@ class RecordsController < ApplicationController
 		@record = Record.new(record_params)
  
   		if @record.save
-    		redirect_to @record
+    		redirect_to records_path
   		else
     		render 'new'
   		end
@@ -27,7 +27,7 @@ class RecordsController < ApplicationController
 
   def update
     if @record.update(record_params)
-      redirect_to @record
+      redirect_to records_path
     else
       render 'edit'
     end
