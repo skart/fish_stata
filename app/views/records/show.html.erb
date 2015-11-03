@@ -1,41 +1,28 @@
-<p>
-  <strong>Date:</strong>
-  <%= @record.date %>
-</p>
- 
-<p>
-  <strong>pH:</strong>
-  <%= @record.ph %>
-</p>
-
-<p>
-  <strong>Ammonia:</strong>
-  <%= @record.ammonia %>
-</p>
-
-<p>
-  <strong>Nitrite:</strong>
-  <%= @record.nitrite %>
-</p>
-
-<p>
-  <strong>Nitrate:</strong>
-  <%= @record.nitrate %>
-</p>
-
-<p>
-  <strong>KH:</strong>
-  <%= @record.kh %>
-</p>
-
-<p>
-  <strong>GH:</strong>
-  <%= @record.gh %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @record.notes %>
-</p>
-
+<strong>Record for: </strong><%= formatted_date_long(@record.date) %>
+<br>
+<br>
+<table>
+   <tr>   
+    <td><strong>pH</strong></td><td><%= @record.ph %></td>
+  </tr>
+   <tr>   
+    <td><strong>Ammonia</strong></td><td><%= @record.ammonia %></td>
+   </tr>
+   <tr> 
+    <td><strong>Nitrite</strong></td><td><%= @record.nitrite %></td>
+  </tr>
+   <tr>   
+    <td><strong>Nitrate</strong></td><td><%= @record.nitrate %></td>
+  </tr>
+   <tr>  
+    <td><strong>KH</strong></td><td><%= @record.kh %></td>
+   </tr>
+   <tr>  
+    <td><strong>GH</strong></td><td><%= @record.gh %></td>
+   </tr>
+   <tr> 
+    <td><strong>Tank Event</strong></td><td><%= @record.notes %></td>
+  </tr>
+</table>
+<br>
 <%= link_to 'Back to Tank Records', controller: 'records' %>
