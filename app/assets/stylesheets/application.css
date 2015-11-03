@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+td, th {
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+th {
+  background: lightblue;
+  border-color: white;
+}
+body {
+  padding: 1rem;
+}
+
+td:nth-child(1) {width: 5rem;}
+td:nth-child(8) {width: 10rem; text-align: left;}

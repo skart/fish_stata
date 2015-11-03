@@ -10,13 +10,13 @@
     <th>Nitrate</th>
     <th>KH</th>
     <th>GH</th>
-    <th>Notes</th>
+    <th align="left">Notes</th>
 
   </tr>
  
   <% @record.each do |t| %>
     <tr>
-      <td><%= t.date %></td>
+      <td><%= formatted_date(t.date) %></td>
       <td><%= t.ph %></td>
       <td><%= t.ammonia %></td>
       <td><%= t.nitrite %></td>
@@ -24,8 +24,8 @@
       <td><%= t.kh %></td>
       <td><%= t.gh %></td>
       <td><%= t.notes %></td>
-      <td><%= button_to 'Show', t %></td>
-      <td><%= button_to 'Edit', edit_record_path(t) %></td>
+      <td><%= button_to 'Show', t, method: :get %></td>
+      <td><%= button_to 'Edit', edit_record_path(t), method: :get %></td>
       <td><%= button_to 'Destroy', t, method: :delete, :onclick => "return confirm('Are you sure you want to delete this post?')" %></td>
     </tr>
   <% end %>
