@@ -41,7 +41,7 @@ module RecordsHelper
 	def nitrate_scale
 		[
 			[0, 0], 
-			[0.50, 0.50], 
+			[5, 5.0], 
 			[10, 10.0], 
 			[20, 20.0], 
 			[40, 40.0], 
