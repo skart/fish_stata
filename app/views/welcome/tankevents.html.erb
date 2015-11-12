@@ -1,0 +1,18 @@
+<h1>Tank Events</h1>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Tank Events</th>
+  </tr>
+ 
+  <% @data.each do |t| %>
+    <tr>
+      <td><%= formatted_date(t.date) %></td>
+      <td><%= t.notes %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<%= link_to 'Back to Main Page', records_path %>
+<br>
+##Need to remove the blank rows

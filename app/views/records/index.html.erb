@@ -1,16 +1,17 @@
+<div class="container">
 <h1>Tank Records</h1>
  
  <%= button_to 'New Record', new_record_path, :class => "button", :method => :get %><p>
 <table>
   <tr>
     <th>Date</th>
-    <th>pH</th>
-    <th>Ammonia</th>
-    <th>Nitrite</th>
-    <th>Nitrate</th>
-    <th>KH</th>
-    <th>GH</th>
-    <th>Tank Event</th>
+    <th><%= link_to  "pH",  welcome_ph_path%></th>
+    <th><%= link_to  "Ammonia",  welcome_ammonia_path%></th>
+    <th><%= link_to  "Nitrite",  welcome_nitrite_path%></th>
+    <th><%= link_to  "Nitrate",  welcome_nitrate_path%></th>
+    <th><%= link_to  "KH",  welcome_kh_path%></th>
+    <th><%= link_to  "GH",  welcome_gh_path%></th>
+    <th><%= link_to  "Tank Events",  welcome_tankevents_path%></th>
 
   </tr>
  
@@ -30,4 +31,6 @@
     </tr>
   <% end %>
 </table>
-
+<br>
+ 
+</div>

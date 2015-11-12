@@ -1,0 +1,16 @@
+<h1>Nitrite Logs</h1>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Nitrite</th>
+  </tr>
+ 
+  <% @data.each do |t| %>
+    <tr>
+      <td><%= formatted_date(t.date) %></td>
+      <td><%= t.nitrite %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<%= link_to 'Back to Main Page', records_path %>

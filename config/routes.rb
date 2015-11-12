@@ -2,6 +2,13 @@ Rails.application.routes.draw do
     resources :records
    root 'records#index'
 
+   get 'welcome/ph'
+   get 'welcome/ammonia'
+   get 'welcome/nitrite'
+   get 'welcome/nitrate'
+   get 'welcome/kh'
+   get 'welcome/gh'
+   get 'welcome/tankevents'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
