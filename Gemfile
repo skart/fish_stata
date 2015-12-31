@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'http://gems.github.com/'
 
-#gem 'nokogiri', '1.6.7.rc3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
+gem 'libv8', '3.16.14.3'
 gem 'therubyracer', platforms: :ruby
 gem 'thin'
 
@@ -24,7 +25,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'nokogiri', '1.6.7.rc3'
 gem "googlecharts", :require => "gchart"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
